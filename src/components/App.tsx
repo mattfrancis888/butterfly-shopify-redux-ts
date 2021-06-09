@@ -1,7 +1,8 @@
 import React from "react";
 import logo from "../images/logo.svg";
 import "../styles/App.css";
-import "../styles/shopify.css";
+// import "../styles/shopify.css";
+import "../css/main.css";
 import ProductsPage from "./ProductsPage";
 import Cart from "./shopify/Cart";
 import Nav from "./Nav";
