@@ -6,7 +6,7 @@ import ProductsPage from "./ProductsPage";
 import Cart from "./shopify/Cart";
 import Nav from "./Nav";
 import { bootstrapShopify } from "../utils/utils";
-
+import Input from "./shopify/Input";
 export default function App() {
     // create the shopify client, initialize checkout, retrieve products, etc.
     bootstrapShopify();
@@ -14,6 +14,7 @@ export default function App() {
     return (
         <div className="App">
             <Nav />
+            <Input />
             <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo" />
                 <p>

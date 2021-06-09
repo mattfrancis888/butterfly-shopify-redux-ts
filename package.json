@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@shopify/polaris": "^6.5.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
@@ -12,13 +13,15 @@
     "@types/react-dom": "^16.9.8",
     "@types/react-redux": "^7.1.9",
     "@types/shopify-buy": "^2.10.1",
+    "graphql-tag": "^2.12.4",
     "react": "^16.13.1",
+    "react-apollo": "^3.1.5",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.0",
     "react-scripts": "3.4.1",
     "redux": "^4.0.5",
     "shopify-buy": "^2.11.0",
-    "typescript": "^3.7.5"
+    "typescript": "^4.3.2"
   },
   "scripts": {
     "start": "react-scripts start",
