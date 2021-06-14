@@ -63,6 +63,7 @@ class MyProvider extends React.Component {
 class MyApp extends App {
     render() {
         const { Component, pageProps, shopOrigin } = this.props;
+
         const config = { apiKey: API_KEY, shopOrigin, forceRedirect: true };
         return (
             <React.Fragment>
