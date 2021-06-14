@@ -7,9 +7,10 @@ import { authenticatedFetch } from "@shopify/app-bridge-utils";
 import "@shopify/polaris/dist/styles.css";
 import "../css/main.css";
 import translations from "@shopify/polaris/locales/en.json";
-
 import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "react-apollo";
+import { Provider as ReduxProvider } from "react-redux";
+import { store } from "../store";
 
 function userLoggedInFetch(app) {
     const fetchFunction = authenticatedFetch(app);
@@ -69,12 +70,15 @@ class MyApp extends App {
                     <title>Sample App</title>
                     <meta charSet="utf-8" />
                 </Head>
+
                 <Provider config={config}>
-                    <AppProvider i18n={translations}>
-                        <MyProvider>
-                            <Component {...pageProps} />
-                        </MyProvider>
-                    </AppProvider>
+                    <ReduxProvider store={store}>
+                        <AppProvider i18n={translations}>
+                            <MyProvider>
+                                <Component {...pageProps} />
+                            </MyProvider>
+                        </AppProvider>
+                    </ReduxProvider>
                 </Provider>
             </React.Fragment>
         );

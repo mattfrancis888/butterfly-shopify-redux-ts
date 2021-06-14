@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/Nav.css";
+
 import { setCartOpen } from "../store/cartUI/actions";
 
 export default function Nav() {
