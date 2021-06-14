@@ -11,8 +11,10 @@ export async function bootstrapShopify(): Promise<void> {
     try {
         // client
         const client = Client.buildClient({
-            storefrontAccessToken: "YOUR_SHOPIFY_STOREFRONT_ACCESS_TOKEN",
-            domain: "YOUR_MYSHOPIFY_STORE_URL",
+            //@ts-ignore
+            storefrontAccessToken: process.env.SHOPIFY_API_KEY,
+            //@ts-ignore
+            domain: process.env.SHOPIFY_APP_URL,
         });
         store.dispatch({ type: CLIENT_CREATED, payload: { client } });
 

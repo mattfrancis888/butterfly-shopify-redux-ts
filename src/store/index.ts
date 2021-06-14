@@ -1,4 +1,4 @@
-import { createStore, combineReducers } from "redux";
+    import { createStore, combineReducers } from "redux";
 import { shopifyReducer } from "./shopify/reducers";
 import { cartUIReducer } from "./cartUI/reducers";
 import { variantsReducer } from "./variants/reducers";

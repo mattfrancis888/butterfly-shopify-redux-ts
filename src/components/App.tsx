@@ -8,6 +8,8 @@ import Cart from "./shopify/Cart";
 import Nav from "./Nav";
 import { bootstrapShopify } from "../utils/utils";
 import Input from "./shopify/Input";
+import AutoComplete from "./shopify/AutoComplete";
+
 export default function App() {
     // create the shopify client, initialize checkout, retrieve products, etc.
     bootstrapShopify();
@@ -15,24 +17,11 @@ export default function App() {
     return (
         <div className="App">
             <Nav />
+
             <Input />
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                    This should be a super cool React and Shopify shop, but it's
-                    just a boilerplate from{" "}
-                    <a
-                        href="https://medium.com/siren-apparel-press/adding-shopifys-storefront-api-to-an-existing-react-app-with-react-redux-ea442bd7543"
-                        target="blank"
-                        rel="no ref no oper"
-                    >
-                        this Medium post
-                    </a>
-                    .
-                </p>
-            </header>
-            <Cart />
-            <ProductsPage />
+            <AutoComplete />
+            {/* <Cart />
+            <ProductsPage /> */}
         </div>
     );
 }

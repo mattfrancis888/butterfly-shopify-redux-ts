@@ -35,6 +35,8 @@ function updateQuantityInCart(id: string | number, quantity: number) {
     const { cart, client } = shopify;
     if (client && cart) {
         const checkoutId = cart.id;
+        //@ts-ignore
+
         client.checkout.updateLineItem(checkoutId, [{ id, quantity }]);
     }
 }
